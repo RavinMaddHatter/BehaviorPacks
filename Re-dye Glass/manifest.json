@@ -1,0 +1,18 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "Allows Glass to be re-dyed to other colors",
+        "name": "Re-Dye Glass",
+        "uuid": "ee649bcf-256c-4023-9011-7b802b89d756",
+        "version": [ 0, 0, 1 ],
+        "min_engine_version": [ 1, 14, 0 ]
+    },
+    "modules": [
+        {
+            "description": "Re-Dye Glass",
+            "type": "data",
+            "uuid": "fa6e90c8-c925-4612-8155-c8a60b753cbb",
+            "version": [0, 0, 1]
+        }
+    ]
+}

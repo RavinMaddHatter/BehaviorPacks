@@ -1,0 +1,32 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "minecraft:magenta_concrete_powder_from_dye13"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "group": "stained_glass",
+    "priority": 1,
+    "pattern": [
+      "###",
+      "#X#",
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:concrete_powder"
+      },
+      "X": {
+        "item": "minecraft:dye",
+        "data": 13
+      }
+    },
+    "result": {
+      "item": "minecraft:concrete_powder",
+      "data": 2,
+      "count": 8
+    }
+  }
+}

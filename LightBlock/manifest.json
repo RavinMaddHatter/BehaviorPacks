@@ -1,0 +1,18 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "Blaze Rods and powder can be combined with glass bottles to create all light levels, Odd light levels can be upgraded with blaze powder.",
+        "name": "Light Block Crafting",
+        "uuid": "535d0bab-87c7-49d3-b19a-5044980dac35",
+        "version": [ 0, 0, 1 ],
+        "min_engine_version": [ 1, 14, 0 ]
+    },
+    "modules": [
+        {
+            "description": "Blaze Rods and powder can be combined with glass bottles to create all light levels, Odd light levels can be upgraded with blaze powder.",
+            "type": "data",
+            "uuid": "0187da32-7852-4296-9527-59200375b083",
+            "version": [0, 0, 1]
+        }
+    ]
+}

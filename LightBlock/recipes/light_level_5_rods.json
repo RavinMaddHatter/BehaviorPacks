@@ -1,0 +1,31 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "minecraft:lightBlock5Rods"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "priority": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:glass_bottle"
+      },
+      {
+        "item": "minecraft:blaze_rod"
+      },
+      {
+        "item": "minecraft:blaze_rod"
+      },
+      {
+        "item": "minecraft:blaze_rod"
+      }
+    ],
+    "result": {
+      "item": "minecraft:light_block",
+      "data": 5,
+      "count": 6
+    }
+  }
+}

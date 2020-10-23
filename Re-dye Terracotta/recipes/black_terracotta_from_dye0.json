@@ -1,0 +1,32 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "minecraft:black_terracotta_from_dye0"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "group": "stained_hardened_clay",
+    "priority": 1,
+    "pattern": [
+      "###",
+      "#X#",
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:stained_hardened_clay"
+      },
+      "X": {
+        "item": "minecraft:dye",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "minecraft:stained_hardened_clay",
+      "data": 15,
+      "count": 8
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "Allows Concrete Powder Pane to be re-dyed to other colors",
+        "name": "Re-Dye Concrete Powder",
+        "uuid": "ee649bcf-256c-4014-9068-7b802b89d756",
+        "version": [ 0, 0, 1 ],
+        "min_engine_version": [ 1, 14, 0 ]
+    },
+    "modules": [
+        {
+            "description": "Re-Dye Concrete Powder",
+            "type": "data",
+            "uuid": "fa6e90c8-c924-460f-8155-c8a60b753cbb",
+            "version": [0, 0, 1]
+        }
+    ]
+}

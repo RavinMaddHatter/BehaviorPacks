@@ -1,0 +1,18 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "Allows Glass Pane to be re-dyed to other colors",
+        "name": "Re-Dye Glass Pane",
+        "uuid": "ee649bff-256c-4013-9068-7b802b89d756",
+        "version": [ 0, 0, 1 ],
+        "min_engine_version": [ 1, 14, 0 ]
+    },
+    "modules": [
+        {
+            "description": "Re-Dye Glass Pane",
+            "type": "data",
+            "uuid": "ff6e90c8-c925-460f-8155-c8a60b753cbb",
+            "version": [0, 0, 1]
+        }
+    ]
+}

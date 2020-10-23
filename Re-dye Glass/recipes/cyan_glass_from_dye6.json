@@ -1,0 +1,32 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "minecraft:cyan_glass_from_dye6"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "group": "stained_glass",
+    "priority": 1,
+    "pattern": [
+      "###",
+      "#X#",
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:stained_glass"
+      },
+      "X": {
+        "item": "minecraft:dye",
+        "data": 6
+      }
+    },
+    "result": {
+      "item": "minecraft:stained_glass",
+      "data": 9,
+      "count": 8
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "minecraft:lightBlock14"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "priority": 1,
+    "ingredients": [
+      {
+        "item": "minecraft:light_block",
+		"data":13
+      },
+      {
+        "item": "minecraft:blaze_powder"
+      }
+    ],
+    "result": {
+      "item": "minecraft:light_block",
+      "data": 14,
+      "count": 1
+    }
+  }
+}

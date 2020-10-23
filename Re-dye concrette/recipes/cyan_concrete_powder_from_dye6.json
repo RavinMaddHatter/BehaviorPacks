@@ -1,0 +1,32 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "minecraft:cyan_concrete_powder_from_dye6"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "group": "stained_glass",
+    "priority": 1,
+    "pattern": [
+      "###",
+      "#X#",
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:concrete_powder"
+      },
+      "X": {
+        "item": "minecraft:dye",
+        "data": 6
+      }
+    },
+    "result": {
+      "item": "minecraft:concrete_powder",
+      "data": 9,
+      "count": 8
+    }
+  }
+}

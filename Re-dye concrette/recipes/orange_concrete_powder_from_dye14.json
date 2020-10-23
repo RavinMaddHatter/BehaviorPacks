@@ -1,0 +1,32 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "minecraft:orange_concrete_powder_from_dye14"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "group": "stained_glass",
+    "priority": 1,
+    "pattern": [
+      "###",
+      "#X#",
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:concrete_powder"
+      },
+      "X": {
+        "item": "minecraft:dye",
+        "data": 14
+      }
+    },
+    "result": {
+      "item": "minecraft:concrete_powder",
+      "data": 1,
+      "count": 8
+    }
+  }
+}
