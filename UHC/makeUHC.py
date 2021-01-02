@@ -306,7 +306,6 @@ def makePack():
             print(file)
             zip.write(file)
 root = Tk()
-
 root.title("Madhatter's UHC Maker")
 
 roundTimeLb=Label(root, text="Round Time")
@@ -363,3 +362,4 @@ r+=1
 
 saveButton.grid(row=r,column=1)
 r+=1
+root.mainloop(  )
