@@ -177,8 +177,8 @@ def makeStartFunction(packName,controllerName,safeTime,maxR):
         functionFile.write("spreadplayers 0 0 200 {} @a\n".format(maxR*.7))
         functionFile.write("gamerule pvp false\n")
         functionFile.write("gamemode s @a\n")
-        functionFile.write("effect @a instant_health 1 255 true\n")
-        functionFile.write("effect @a saturation 1 5 true\n")
+        functionFile.write("effect @a instant_health 1 255 false\n")
+        functionFile.write("effect @a saturation 1 20 false\n")
         functionFile.write("title @a actionbar Game Start {:.1f} min of No PVP starts now\n".format(safeTime/60))
         functionFile.write("\n")
 def makeStopFunction(packName):
@@ -194,8 +194,8 @@ def makeStopFunction(packName):
         functionFile.write("title @a actionbar UHC over. all game rules set back to normal\n")
         functionFile.write("gamemode s @a\n")
         functionFile.write("tag @a remove dead\n")
-        functionFile.write("effect @a instant_health 1 255 true\n")
-        functionFile.write("effect @a saturation 1 5 true\n")
+        functionFile.write("effect @a instant_health 1 255 false\n")
+        functionFile.write("effect @a saturation 1 20 false\n")
         
         functionFile.write("clear @a\n")
         functionFile.write("\n")
@@ -210,6 +210,7 @@ def makeFillInventoryFunction(packName):
             
         functionFile.write("effect @a[tag=dead] weakness 10 255 false\n")
         functionFile.write("effect @a[tag=dead] invisibility 10 255 false\n")
+        functionFile.write("effect @a[tag=dead] slow_falling 10 1 false\n")
         functionFile.write("\n")
 def makeManifest(packName,roundTime,totalGameTime,safeTime,startR,stopR):
     manifest={}

@@ -10017,7 +10017,7 @@ health={
 							"/tag @s add dead",
 							"/gamemode a @s " ],
 						"on_exit":["/spreadplayers 0 0 1 20 @s[tag=dead]",
-									"/effect @s saturation 100000 255 false",
+									"/effect @s saturation 1 255 false",
 									"/ability @s mayfly true"]},
 				"1": { "transitions": [ {"default": "query.health != 1"} ], "on_entry": [ "/execute @s[tag=!dead] ~~~ scoreboard players set @s detect_health 1" ] },
 				"2": { "transitions": [ {"default": "query.health != 2"} ], "on_entry": [ "/execute @s[tag=!dead] ~~~ scoreboard players set @s detect_health 2" ] },
