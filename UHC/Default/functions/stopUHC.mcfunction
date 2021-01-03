@@ -7,7 +7,7 @@ gamerule pvp true
 title @a actionbar UHC over. all game rules set back to normal
 gamemode s @a
 tag @a remove dead
-effect @a instant_health 1 255 true
-effect @a saturation 1 5 true
+effect @a instant_health 1 255 false
+effect @a saturation 1 20 false
 clear @a
 

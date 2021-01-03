@@ -36,4 +36,5 @@ replaceitem entity @a[tag=dead] slot.hotbar 7 barrier 1 1 {"keep_on_death": {}, 
 replaceitem entity @a[tag=dead] slot.hotbar 8 barrier 1 1 {"keep_on_death": {}, "item_lock": {"mode": "lock_in_slot"}}
 effect @a[tag=dead] weakness 10 255 false
 effect @a[tag=dead] invisibility 10 255 false
+effect @a[tag=dead] slow_falling 10 1 false
 

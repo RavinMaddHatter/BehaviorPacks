@@ -30023,7 +30023,7 @@
           ],
           "on_exit": [
             "/spreadplayers 0 0 1 20 @s[tag=dead]",
-            "/effect @s saturation 100000 255 false",
+            "/effect @s saturation 1 255 false",
             "/ability @s mayfly true"
           ]
         },
