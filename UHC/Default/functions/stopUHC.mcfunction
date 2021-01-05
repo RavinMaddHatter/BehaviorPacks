@@ -7,7 +7,6 @@ gamerule pvp true
 title @a actionbar UHC over. all game rules set back to normal
 gamemode s @a
 tag @a remove dead
-event entity @a hc:remove_spectator
 effect @a instant_health 1 255 false
 effect @a saturation 1 20 false
 clear @a

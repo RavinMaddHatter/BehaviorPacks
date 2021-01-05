@@ -67,14 +67,14 @@ def gameControllerParts(packName,roundTime,totalGameTime,safeTime,startR,stopR):
     states["default"]["transitions"].append({"start":"query.variant==70"})
     states["default"]["transitions"].append({"pvp_start":"query.variant==71"})
     states["start"]={}
-    states["start"]["on_entry"]=["/title @a[rm={}] actionbar Next Game step you must be closer than {} from 0,0 you will take damage here".format(rSteps[1],rSteps[1])]
+    states["start"]["on_entry"]=["/title @a[rm={}] actionbar World border closing, you will take damage here.".format(rSteps[1])]
     states["start"]["on_entry"].append("/scoreboard players set @e[name=zero] detect_health {}".format(rSteps[0]))
     states["start"]["on_entry"].append("/effect @a[rm={}] wither 2 1".format(rSteps[0]))
     
     
     states["start"]["transitions"]=[{"default": "math.mod(query.time_stamp,10)==1"}]
     states["pvp_start"]={}
-    states["pvp_start"]["on_entry"]=["/title @a[rm={}] actionbar Next Game step you must be closer than {} from 0,0 you will take damage here".format(rSteps[1],rSteps[1])]
+    states["pvp_start"]["on_entry"]=["/title @a[rm={}] actionbar World border closing, you will take damage here.".format(rSteps[1])]
     states["pvp_start"]["on_entry"].append("/scoreboard players set @e[name=zero] detect_health {}".format(rSteps[0]))
     states["pvp_start"]["on_entry"].append("/effect @a[rm={}] wither 2 1".format(rSteps[0]))
     states["pvp_start"]["on_entry"].append("/gamerule pvp true")
@@ -112,7 +112,7 @@ def gameControllerParts(packName,roundTime,totalGameTime,safeTime,startR,stopR):
     
     for i in range(numRounds-1):
         
-        commands=["/title @a[rm={}] actionbar Next Game step you must be closer than {} from 0,0 you will take damage here".format(rSteps[i+1],rSteps[i+1])]
+        commands=["/title @a[rm={}] actionbar World border closing, you will take damage here.".format(rSteps[i+1])]
         
         commands.append("/scoreboard players set @e[name=zero] detect_health {}".format(rSteps[i]))
         commands.append("/effect @a[rm={}] wither 2 1".format(rSteps[i]))
@@ -177,10 +177,8 @@ def makeStartFunction(packName,controllerName,safeTime,maxR):
         functionFile.write("spreadplayers 0 0 200 {} @a\n".format(maxR*.7))
         functionFile.write("gamerule pvp false\n")
         functionFile.write("gamemode s @a\n")
-        functionFile.write("event entity @a hc:remove_spectator\n")
         functionFile.write("effect @a instant_health 1 255 false\n")
         functionFile.write("effect @a saturation 1 20 false\n")
-        
         functionFile.write("title @a actionbar Game Start {:.1f} min of No PVP starts now\n".format(safeTime/60))
         functionFile.write("\n")
 def makeStopFunction(packName):
@@ -196,10 +194,8 @@ def makeStopFunction(packName):
         functionFile.write("title @a actionbar UHC over. all game rules set back to normal\n")
         functionFile.write("gamemode s @a\n")
         functionFile.write("tag @a remove dead\n")
-        functionFile.write("event entity @a hc:remove_spectator\n")
         functionFile.write("effect @a instant_health 1 255 false\n")
         functionFile.write("effect @a saturation 1 20 false\n")
-        
         
         functionFile.write("clear @a\n")
         functionFile.write("\n")
@@ -297,10 +293,6 @@ def makePack():
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path,"w+") as json_file:
         json.dump(player.player,json_file,indent=2)
-    path="{}/animation_controllers/uhc/spectator.json".format(packName)
-    os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(path,"w+") as json_file:
-        json.dump(player.spectator,json_file,indent=2)
     path="{}/animation_controllers/uhc/health.json".format(packName)
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path,"w+") as json_file:
