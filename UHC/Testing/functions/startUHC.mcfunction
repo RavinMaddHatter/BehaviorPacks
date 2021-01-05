@@ -13,7 +13,8 @@ effect @a slow_falling 90 1 true
 spreadplayers 0 0 200 1050.0 @a
 gamerule pvp false
 gamemode s @a
-effect @a instant_health 1 255 true
-effect @a saturation 1 5 true
+event entity @a hc:remove_spectator
+effect @a instant_health 1 255 false
+effect @a saturation 1 20 false
 title @a actionbar Game Start 5.0 min of No PVP starts now
 

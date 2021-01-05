@@ -30019,11 +30019,9 @@
           "on_entry": [
             "/scoreboard players reset @s detect_health",
             "/tag @s add dead",
-            "/gamemode a @s "
+            "@s hc:add_spectator"
           ],
           "on_exit": [
-            "/spreadplayers 0 0 1 20 @s[tag=dead]",
-            "/effect @s saturation 100000 255 false",
             "/ability @s mayfly true"
           ]
         },

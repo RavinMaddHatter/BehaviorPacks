@@ -9,12 +9,16 @@
       "scripts": {
         "animate": [
           "health",
-          "start"
+          "health",
+          "spectator",
+          "adventure"
         ]
       },
       "animations": {
+        "health": "controller.animation.health",
         "start": "animation.start",
-        "health": "controller.animation.health"
+        "spectator": "controller.animation.spectator",
+        "adventure": "controller.animation.adventure"
       }
     },
     "component_groups": {
@@ -30,8 +34,8 @@
         },
         "minecraft:timer": {
           "time": [
-            0.0,
-            0.0
+            0,
+            0
           ],
           "looping": false,
           "time_down_event": {
@@ -53,24 +57,47 @@
         "minecraft:spell_effects": {
           "remove_effects": "bad_omen"
         }
+      },
+      "hc:spectator": {
+        "minecraft:is_baby": {},
+        "minecraft:is_tamed": {},
+        "minecraft:is_chested": {},
+        "minecraft:type_family": {
+          "family": [
+            "undead"
+          ]
+        },
+        "minecraft:collision_box": {
+          "width": 0.01,
+          "height": 0.01
+        },
+        "minecraft:damage_sensor": {
+          "triggers": {
+            "cause": "all",
+            "deals_damage": false
+          }
+        }
+      },
+      "hc:player": {
+        "minecraft:collision_box": {
+          "width": 0.6,
+          "height": 1.8
+        },
+        "minecraft:type_family": {
+          "family": [
+            "player"
+          ]
+        },
+        "minecraft:is_chested": {}
       }
     },
     "components": {
       "minecraft:experience_reward": {
         "on_death": "Math.Min(query.player_level * 7, 100)"
       },
-      "minecraft:type_family": {
-        "family": [
-          "player"
-        ]
-      },
       "minecraft:is_hidden_when_invisible": {},
       "minecraft:loot": {
         "table": "loot_tables/empty.json"
-      },
-      "minecraft:collision_box": {
-        "width": 0.6,
-        "height": 1.8
       },
       "minecraft:can_climb": {},
       "minecraft:movement": {
@@ -155,6 +182,7 @@
           }
         ]
       },
+      "minecraft:conditional_bandwidth_optimization": {},
       "minecraft:scaffolding_climber": {},
       "minecraft:environment_sensor": {
         "triggers": {
@@ -207,6 +235,30 @@
         "remove": {
           "component_groups": [
             "minecraft:raid_trigger"
+          ]
+        }
+      },
+      "hc:add_spectator": {
+        "add": {
+          "component_groups": [
+            "hc:spectator"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "hc:player"
+          ]
+        }
+      },
+      "hc:remove_spectator": {
+        "remove": {
+          "component_groups": [
+            "hc:spectator"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "hc:player"
           ]
         }
       }

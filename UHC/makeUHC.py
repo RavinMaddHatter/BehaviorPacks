@@ -177,8 +177,10 @@ def makeStartFunction(packName,controllerName,safeTime,maxR):
         functionFile.write("spreadplayers 0 0 200 {} @a\n".format(maxR*.7))
         functionFile.write("gamerule pvp false\n")
         functionFile.write("gamemode s @a\n")
+        functionFile.write("event entity @a hc:remove_spectator\n")
         functionFile.write("effect @a instant_health 1 255 false\n")
         functionFile.write("effect @a saturation 1 20 false\n")
+        
         functionFile.write("title @a actionbar Game Start {:.1f} min of No PVP starts now\n".format(safeTime/60))
         functionFile.write("\n")
 def makeStopFunction(packName):
@@ -194,8 +196,10 @@ def makeStopFunction(packName):
         functionFile.write("title @a actionbar UHC over. all game rules set back to normal\n")
         functionFile.write("gamemode s @a\n")
         functionFile.write("tag @a remove dead\n")
+        functionFile.write("event entity @a hc:remove_spectator\n")
         functionFile.write("effect @a instant_health 1 255 false\n")
         functionFile.write("effect @a saturation 1 20 false\n")
+        
         
         functionFile.write("clear @a\n")
         functionFile.write("\n")
@@ -293,6 +297,10 @@ def makePack():
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path,"w+") as json_file:
         json.dump(player.player,json_file,indent=2)
+    path="{}/animation_controllers/uhc/spectator.json".format(packName)
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path,"w+") as json_file:
+        json.dump(player.spectator,json_file,indent=2)
     path="{}/animation_controllers/uhc/health.json".format(packName)
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path,"w+") as json_file:

@@ -3,7 +3,7 @@
   "header": {
     "description": "This is a UHC with the rules: Total Game Time: 5400, Shrink Interval: 300, PVP off Timer: 300, Max Radius: 1500, Min Radius: 50",
     "name": "Custom Hatter UHC:Default",
-    "uuid": "16b45728-bf65-4952-9b45-46bb7d342c04",
+    "uuid": "1c5e47cc-5808-41e1-ab01-b5f79e1548b7",
     "version": [
       0,
       0,
@@ -17,7 +17,7 @@
   },
   "modules": [
     {
-      "uuid": "d2c2b329-8678-4f29-acda-1e88670c133c",
+      "uuid": "f87580aa-50df-4033-8ee7-a187dc197c35",
       "type": "data",
       "version": [
         1,
