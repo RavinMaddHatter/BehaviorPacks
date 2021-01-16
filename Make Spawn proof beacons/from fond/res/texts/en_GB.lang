@@ -1,0 +1,11 @@
+## ENTITIES ##
+##entity.namespace:entity.name=
+
+
+## BLOCKS ##
+##tile.namespace:block.name= ??
+tile.spb:beacon_base.block.name=Despawning Beacon
+
+## INTERACTIONS ##
+##actions....
+

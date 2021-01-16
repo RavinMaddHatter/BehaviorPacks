@@ -1,0 +1,41 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "spb:beacon_base",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/items/nether_star",
+				"skeleton": "textures/entity/skeleton/skeleton",
+				"wither_skeleton": "textures/entity/skeleton/wither_skeleton",
+				"creeper": "textures/entity/creeper/creeper",
+				"zombie": "textures/entity/zombie/zombie"
+				//Additional entity textures can be added here, in the order of the skin_id
+				//Don't forget to add them to the Array.skins in the RenderCtrl
+			},
+			"geometry": {
+				"default": "geometry.beacon_base.nether_star",
+				"head": "geometry.beacon_base.head"
+			},
+			"scripts": {
+				"animate": [
+					"move"
+				]
+			},
+			"animations": {
+				"move": "animation.beacon_base"
+			},
+			"render_controllers": [
+				"controller.render.beacon_base"
+			]
+			//,
+			//"spawn_egg": {
+			//	"texture": "egg_beacon_base",
+			//	"texture_index": 0
+			//}
+			//Remember to set "is_spawnable" to true in the BP entity if this is uncommented.
+		}
+	}
+}

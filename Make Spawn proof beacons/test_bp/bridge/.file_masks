@@ -1,0 +1,14 @@
+{
+	"BP/entities/beacon_base.json": {
+		"data": {}
+	},
+	"BP/blocks/beacon_base.block.json": {
+		"data": {}
+	},
+	"BP/loot_tables/beacon_base.json": {
+		"data": {}
+	},
+	"BP/recipes/beacon_base.block.json": {
+		"data": {}
+	}
+}

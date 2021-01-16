@@ -1,0 +1,29 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "This pack makes a craftable block that spawn proofs a radius around the player, Created by FondUnicycle and RavinMaddHatter",
+    "name": "Spawn Proofing Beacons",
+    "uuid": "df61dc98-6f00-4e5a-a710-c169900534df",
+    "version": [
+      0,
+      0,
+      3
+    ],
+    "min_engine_version": [
+      1,
+      16,
+      0
+    ]
+  },
+  "modules": [
+    {
+      "uuid": "693917f3-1d08-48e0-b40c-d4d99cb315a5",
+      "type": "data",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ]
+}

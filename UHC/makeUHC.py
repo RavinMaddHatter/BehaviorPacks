@@ -297,6 +297,14 @@ def makePack():
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path,"w+") as json_file:
         json.dump(health.health,json_file,indent=2)
+
+    
+    path="{}/animation_controllers/uhc/spectator.json".format(packName)
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path,"w+") as json_file:
+        json.dump(player.spectator,json_file,indent=2)
+
+    
     copyfile("pack_icon.png", "{}/pack_icon.png".format(packName))
     file_paths=[]
     for directory,_,_ in os.walk(packName):

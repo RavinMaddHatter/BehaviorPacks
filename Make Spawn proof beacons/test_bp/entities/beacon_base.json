@@ -1,0 +1,902 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "spb:beacon_base",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false,
+      "animations": {
+        "cntrl": "controller.animation.despawner"
+      },
+      "scripts": {
+        "animate": [
+          "cntrl"
+        ]
+      }
+    },
+    "component_groups": {
+      "mpb:mob_defined_0_range": {
+        "minecraft:variant": {
+          "value": 0
+        }
+      },
+      "mpb:mob_defined_25_range": {
+        "minecraft:variant": {
+          "value": 1
+        }
+      },
+      "mpb:mob_defined_50_range": {
+        "minecraft:variant": {
+          "value": 2
+        }
+      },
+      "mpb:mob_defined_75_range": {
+        "minecraft:variant": {
+          "value": 3
+        }
+      },
+      "mpb:mob_defined_empty": {
+        "minecraft:skin_id": {
+          "value": 0
+        },
+        "minecraft:interact": {
+          "interactions": [
+            {
+              "hurt_item": 0,
+              "interact_text": "Set Mob Type",
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_equipment",
+                      "subject": "player",
+                      "value": "skull:0"
+                    }
+                  ]
+                },
+                "event": "set_skeleton",
+                "target": "self"
+              },
+              "swing": true,
+              "use_item": true
+            },
+            {
+              "hurt_item": 0,
+              "interact_text": "Set Mob Type",
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_equipment",
+                      "subject": "player",
+                      "value": "skull:1"
+                    }
+                  ]
+                },
+                "event": "set_wither_skeleton",
+                "target": "self"
+              },
+              "swing": true,
+              "use_item": true
+            },
+            {
+              "hurt_item": 0,
+              "interact_text": "Set Mob Type",
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_equipment",
+                      "subject": "player",
+                      "value": "skull:4"
+                    }
+                  ]
+                },
+                "event": "set_creeper",
+                "target": "self"
+              },
+              "swing": true,
+              "use_item": true
+            },
+            {
+              "hurt_item": 0,
+              "interact_text": "Set Mob Type",
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_equipment",
+                      "subject": "player",
+                      "value": "skull:2"
+                    }
+                  ]
+                },
+                "event": "set_zombie",
+                "target": "self"
+              },
+              "swing": true,
+              "use_item": true
+            },
+            {
+              "hurt_item": 0,
+              "interact_text": "Set Mob Type",
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_equipment",
+                      "subject": "player",
+                      "value": "slime"
+                    }
+                  ]
+                },
+                "event": "set_slime",
+                "target": "self"
+              },
+              "swing": true,
+              "use_item": true
+            },
+            {
+              "hurt_item": 0,
+              "interact_text": "Set Mob Type",
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_equipment",
+                      "subject": "player",
+                      "value": "glowstone_dust"
+                    }
+                  ]
+                },
+                "event": "set_witch",
+                "target": "self"
+              },
+              "swing": true,
+              "use_item": true
+            },
+            {
+              "hurt_item": 0,
+              "interact_text": "Set Mob Type",
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_equipment",
+                      "subject": "player",
+                      "value": "ghast_tear"
+                    }
+                  ]
+                },
+                "event": "set_ghast",
+                "target": "self"
+              },
+              "swing": true,
+              "use_item": true
+            },
+            {
+              "hurt_item": 0,
+              "interact_text": "Set Mob Type",
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_equipment",
+                      "subject": "player",
+                      "value": "leather"
+                    }
+                  ]
+                },
+                "event": "set_hoglin",
+                "target": "self"
+              },
+              "swing": true,
+              "use_item": true
+            },
+            {
+              "hurt_item": 0,
+              "interact_text": "Set Mob Type",
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_equipment",
+                      "subject": "player",
+                      "value": "iron_axe"
+                    }
+                  ]
+                },
+                "event": "set_vindicator",
+                "target": "self"
+              },
+              "swing": true,
+              "use_item": true
+            },
+            {
+              "hurt_item": 0,
+              "interact_text": "Set Mob Type",
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_equipment",
+                      "subject": "player",
+                      "value": "crossbow"
+                    }
+                  ]
+                },
+                "event": "set_pillager",
+                "target": "self"
+              },
+              "swing": true,
+              "use_item": true
+            },
+            {
+              "hurt_item": 0,
+              "interact_text": "Set Mob Type",
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_equipment",
+                      "subject": "player",
+                      "value": "saddle"
+                    }
+                  ]
+                },
+                "event": "set_ravager",
+                "target": "self"
+              },
+              "swing": true,
+              "use_item": true
+            },
+            {
+              "hurt_item": 0,
+              "interact_text": "Set Mob Type",
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_equipment",
+                      "subject": "player",
+                      "value": "totem"
+                    }
+                  ]
+                },
+                "event": "set_evocation_illager",
+                "target": "self"
+              },
+              "swing": true,
+              "use_item": true
+            },
+            {
+              "hurt_item": 0,
+              "interact_text": "Set Mob Type",
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_equipment",
+                      "subject": "player",
+                      "value": "gold_block"
+                    }
+                  ]
+                },
+                "event": "set_piglin",
+                "target": "self"
+              },
+              "swing": true,
+              "use_item": true
+            },
+            {
+              "hurt_item": 0,
+              "interact_text": "Set Mob Type",
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_equipment",
+                      "subject": "player",
+                      "value": "golden_sword"
+                    }
+                  ]
+                },
+                "event": "set_zombie_pigman",
+                "target": "self"
+              },
+              "swing": true,
+              "use_item": true
+            },
+            {
+              "hurt_item": 0,
+              "interact_text": "Set Mob Type",
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_equipment",
+                      "subject": "player",
+                      "value": "magma_cream"
+                    }
+                  ]
+                },
+                "event": "set_magma_cube",
+                "target": "self"
+              },
+              "swing": true,
+              "use_item": true
+            },
+            {
+              "hurt_item": 0,
+              "interact_text": "Set Mob Type",
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_equipment",
+                      "subject": "player",
+                      "value": "ender_pearl"
+                    }
+                  ]
+                },
+                "event": "set_enderman",
+                "target": "self"
+              },
+              "swing": true,
+              "use_item": true
+            },
+            {
+              "hurt_item": 0,
+              "interact_text": "Set Mob Type",
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_equipment",
+                      "subject": "player",
+                      "value": "blaze_rod"
+                    }
+                  ]
+                },
+                "event": "set_blaze",
+                "target": "self"
+              },
+              "swing": true,
+              "use_item": true
+            },
+            {
+              "hurt_item": 0,
+              "interact_text": "Set Mob Type",
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_equipment",
+                      "subject": "player",
+                      "value": "phantom_membrane"
+                    }
+                  ]
+                },
+                "event": "set_phantom",
+                "target": "self"
+              },
+              "swing": true,
+              "use_item": true
+            },
+            {
+              "hurt_item": 0,
+              "interact_text": "Set Mob Type",
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_equipment",
+                      "subject": "player",
+                      "value": "prismarine"
+                    }
+                  ]
+                },
+                "event": "set_guardian",
+                "target": "self"
+              },
+              "swing": true,
+              "use_item": true
+            },
+            {
+              "hurt_item": 0,
+              "interact_text": "Set Mob Type",
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_equipment",
+                      "subject": "player",
+                      "value": "trident"
+                    }
+                  ]
+                },
+                "event": "set_drowned",
+                "target": "self"
+              },
+              "swing": true,
+              "use_item": true
+            },
+            {
+              "hurt_item": 0,
+              "interact_text": "Set Mob Type",
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_equipment",
+                      "subject": "player",
+                      "value": "web"
+                    }
+                  ]
+                },
+                "event": "set_spider",
+                "target": "self"
+              },
+              "swing": true,
+              "use_item": true
+            }
+          ]
+        }
+      },
+      "mpb:despawn": {
+        "minecraft:instant_despawn": {}
+      },
+      "mpb:mob_defined_skeleton": {
+        "minecraft:skin_id": {
+          "value": 1
+        }
+      },
+      "mpb:mob_defined_wither_skeleton": {
+        "minecraft:skin_id": {
+          "value": 2
+        }
+      },
+      "mpb:mob_defined_creeper": {
+        "minecraft:skin_id": {
+          "value": 3
+        }
+      },
+      "mpb:mob_defined_zombie": {
+        "minecraft:skin_id": {
+          "value": 4
+        }
+      },
+      "mpb:mob_defined_slime": {
+        "minecraft:skin_id": {
+          "value": 5
+        }
+      },
+      "mpb:mob_defined_witch": {
+        "minecraft:skin_id": {
+          "value": 6
+        }
+      },
+      "mpb:mob_defined_ghast": {
+        "minecraft:skin_id": {
+          "value": 7
+        }
+      },
+      "mpb:mob_defined_hoglin": {
+        "minecraft:skin_id": {
+          "value": 8
+        }
+      },
+      "mpb:mob_defined_vindicator": {
+        "minecraft:skin_id": {
+          "value": 9
+        }
+      },
+      "mpb:mob_defined_pillager": {
+        "minecraft:skin_id": {
+          "value": 10
+        }
+      },
+      "mpb:mob_defined_ravager": {
+        "minecraft:skin_id": {
+          "value": 11
+        }
+      },
+      "mpb:mob_defined_evocation_illager": {
+        "minecraft:skin_id": {
+          "value": 12
+        }
+      },
+      "mpb:mob_defined_piglin": {
+        "minecraft:skin_id": {
+          "value": 13
+        }
+      },
+      "mpb:mob_defined_zombie_pigman": {
+        "minecraft:skin_id": {
+          "value": 14
+        }
+      },
+      "mpb:mob_defined_magma_cube": {
+        "minecraft:skin_id": {
+          "value": 15
+        }
+      },
+      "mpb:mob_defined_enderman": {
+        "minecraft:skin_id": {
+          "value": 16
+        }
+      },
+      "mpb:mob_defined_blaze": {
+        "minecraft:skin_id": {
+          "value": 17
+        }
+      },
+      "mpb:mob_defined_phantom": {
+        "minecraft:skin_id": {
+          "value": 18
+        }
+      },
+      "mpb:mob_defined_guardian": {
+        "minecraft:skin_id": {
+          "value": 19
+        }
+      },
+      "mpb:mob_defined_drowned": {
+        "minecraft:skin_id": {
+          "value": 20
+        }
+      },
+      "mpb:mob_defined_spider": {
+        "minecraft:skin_id": {
+          "value": 21
+        }
+      }
+    },
+    "components": {
+      "minecraft:nameable": {},
+      "minecraft:type_family": {
+        "family": [
+          "inanimate",
+          "beacon_base"
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.5,
+        "height": 1.5
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/empty"
+      },
+      "minecraft:physics": {
+        "has_collision": false,
+        "has_gravity": false
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:interact": {},
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "all",
+            "deals_damage": false
+          }
+        ]
+      }
+    },
+    "events": {
+      "set_range_0": {
+        "add": {
+          "component_groups": [
+            "mpb:mob_defined_0_range"
+          ]
+        }
+      },
+      "set_range_25": {
+        "add": {
+          "component_groups": [
+            "mpb:mob_defined_25_range"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mpb:mob_defined_0_range"
+          ]
+        }
+      },
+      "set_range_50": {
+        "add": {
+          "component_groups": [
+            "mpb:mob_defined_50_range"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mpb:mob_defined_25_range"
+          ]
+        }
+      },
+      "set_range_75": {
+        "add": {
+          "component_groups": [
+            "mpb:mob_defined_75_range"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mpb:mob_defined_50_range"
+          ]
+        }
+      },
+      "set_skeleton": {
+        "add": {
+          "component_groups": [
+            "mpb:mob_defined_skeleton"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mpb:mob_defined_empty"
+          ]
+        }
+      },
+      "set_wither_skeleton": {
+        "add": {
+          "component_groups": [
+            "mpb:mob_defined_wither_skeleton"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mpb:mob_defined_empty"
+          ]
+        }
+      },
+      "set_creeper": {
+        "add": {
+          "component_groups": [
+            "mpb:mob_defined_creeper"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mpb:mob_defined_empty"
+          ]
+        }
+      },
+      "set_zombie": {
+        "add": {
+          "component_groups": [
+            "mpb:mob_defined_zombie"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mpb:mob_defined_empty"
+          ]
+        }
+      },
+      "set_slime": {
+        "add": {
+          "component_groups": [
+            "mpb:mob_defined_slime"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mpb:mob_defined_empty"
+          ]
+        }
+      },
+      "set_witch": {
+        "add": {
+          "component_groups": [
+            "mpb:mob_defined_witch"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mpb:mob_defined_empty"
+          ]
+        }
+      },
+      "set_ghast": {
+        "add": {
+          "component_groups": [
+            "mpb:mob_defined_ghast"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mpb:mob_defined_empty"
+          ]
+        }
+      },
+      "set_hoglin": {
+        "add": {
+          "component_groups": [
+            "mpb:mob_defined_hoglin"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mpb:mob_defined_empty"
+          ]
+        }
+      },
+      "set_vindicator": {
+        "add": {
+          "component_groups": [
+            "mpb:mob_defined_vindicator"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mpb:mob_defined_empty"
+          ]
+        }
+      },
+      "set_pillager": {
+        "add": {
+          "component_groups": [
+            "mpb:mob_defined_pillager"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mpb:mob_defined_empty"
+          ]
+        }
+      },
+      "set_ravager": {
+        "add": {
+          "component_groups": [
+            "mpb:mob_defined_ravager"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mpb:mob_defined_empty"
+          ]
+        }
+      },
+      "set_evocation_illager": {
+        "add": {
+          "component_groups": [
+            "mpb:mob_defined_evocation_illager"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mpb:mob_defined_empty"
+          ]
+        }
+      },
+      "set_piglin": {
+        "add": {
+          "component_groups": [
+            "mpb:mob_defined_piglin"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mpb:mob_defined_empty"
+          ]
+        }
+      },
+      "set_zombie_pigman": {
+        "add": {
+          "component_groups": [
+            "mpb:mob_defined_zombie_pigman"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mpb:mob_defined_empty"
+          ]
+        }
+      },
+      "set_magma_cube": {
+        "add": {
+          "component_groups": [
+            "mpb:mob_defined_magma_cube"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mpb:mob_defined_empty"
+          ]
+        }
+      },
+      "set_enderman": {
+        "add": {
+          "component_groups": [
+            "mpb:mob_defined_enderman"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mpb:mob_defined_empty"
+          ]
+        }
+      },
+      "set_blaze": {
+        "add": {
+          "component_groups": [
+            "mpb:mob_defined_blaze"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mpb:mob_defined_empty"
+          ]
+        }
+      },
+      "set_phantom": {
+        "add": {
+          "component_groups": [
+            "mpb:mob_defined_phantom"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mpb:mob_defined_empty"
+          ]
+        }
+      },
+      "set_guardian": {
+        "add": {
+          "component_groups": [
+            "mpb:mob_defined_guardian"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mpb:mob_defined_empty"
+          ]
+        }
+      },
+      "set_drowned": {
+        "add": {
+          "component_groups": [
+            "mpb:mob_defined_drowned"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mpb:mob_defined_empty"
+          ]
+        }
+      },
+      "set_spider": {
+        "add": {
+          "component_groups": [
+            "mpb:mob_defined_spider"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "mpb:mob_defined_empty"
+          ]
+        }
+      },
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": [
+            "mpb:mob_defined_empty",
+            "mpb:mob_defined_0_range"
+          ]
+        }
+      },
+      "despawn_entity": {
+        "add": {
+          "component_groups": [
+            "mpb:despawn"
+          ]
+        }
+      }
+    }
+  }
+}

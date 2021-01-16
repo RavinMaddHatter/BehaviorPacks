@@ -1,0 +1,170 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.despawner": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "skeleton_range_25": "query.skin_id==1&&query.variant==1"
+            },
+            {
+              "skeleton_range_50": "query.skin_id==1&&query.variant==2"
+            },
+            {
+              "skeleton_range_75": "query.skin_id==1&&query.variant==3"
+            },
+            {
+              "wither_skeleton_range_25": "query.skin_id==2&&query.variant==1"
+            },
+            {
+              "wither_skeleton_range_50": "query.skin_id==2&&query.variant==2"
+            },
+            {
+              "wither_skeleton_range_75": "query.skin_id==2&&query.variant==3"
+            },
+            {
+              "creeper_range_25": "query.skin_id==3&&query.variant==1"
+            },
+            {
+              "creeper_range_50": "query.skin_id==3&&query.variant==2"
+            },
+            {
+              "creeper_range_75": "query.skin_id==3&&query.variant==3"
+            },
+            {
+              "zombie_range_25": "query.skin_id==4&&query.variant==1"
+            },
+            {
+              "zombie_range_50": "query.skin_id==4&&query.variant==2"
+            },
+            {
+              "zombie_range_75": "query.skin_id==4&&query.variant==3"
+            }
+          ]
+        },
+        "skeleton_range_25": {
+          "transitions": [
+            {
+              "default": "math.mod(query.time_stamp,10)==1"
+            }
+          ],
+          "on_entry": [
+            "/tp @e[type=skeleton,name=!save,r=25] ~ -10 ~"
+          ]
+        },
+        "skeleton_range_50": {
+          "transitions": [
+            {
+              "default": "math.mod(query.time_stamp,10)==1"
+            }
+          ],
+          "on_entry": [
+            "/tp @e[type=skeleton,name=!save,r=50] ~ -10 ~"
+          ]
+        },
+        "skeleton_range_75": {
+          "transitions": [
+            {
+              "default": "math.mod(query.time_stamp,10)==1"
+            }
+          ],
+          "on_entry": [
+            "/tp @e[type=skeleton,name=!save,r=75] ~ -10 ~"
+          ]
+        },
+        "wither_skeleton_range_25": {
+          "transitions": [
+            {
+              "default": "math.mod(query.time_stamp,10)==1"
+            }
+          ],
+          "on_entry": [
+            "/tp @e[type=wither_skeleton,name=!save,r=25] ~ -10 ~"
+          ]
+        },
+        "wither_skeleton_range_50": {
+          "transitions": [
+            {
+              "default": "math.mod(query.time_stamp,10)==1"
+            }
+          ],
+          "on_entry": [
+            "/tp @e[type=wither_skeleton,name=!save,r=50] ~ -10 ~"
+          ]
+        },
+        "wither_skeleton_range_75": {
+          "transitions": [
+            {
+              "default": "math.mod(query.time_stamp,10)==1"
+            }
+          ],
+          "on_entry": [
+            "/tp @e[type=wither_skeleton,name=!save,r=75] ~ -10 ~"
+          ]
+        },
+        "creeper_range_25": {
+          "transitions": [
+            {
+              "default": "math.mod(query.time_stamp,10)==1"
+            }
+          ],
+          "on_entry": [
+            "/tp @e[type=creeper,name=!save,r=25] ~ -10 ~"
+          ]
+        },
+        "creeper_range_50": {
+          "transitions": [
+            {
+              "default": "math.mod(query.time_stamp,10)==1"
+            }
+          ],
+          "on_entry": [
+            "/tp @e[type=creeper,name=!save,r=50] ~ -10 ~"
+          ]
+        },
+        "creeper_range_75": {
+          "transitions": [
+            {
+              "default": "math.mod(query.time_stamp,10)==1"
+            }
+          ],
+          "on_entry": [
+            "/tp @e[type=creeper,name=!save,r=75] ~ -10 ~"
+          ]
+        },
+        "zombie_range_25": {
+          "transitions": [
+            {
+              "default": "math.mod(query.time_stamp,10)==1"
+            }
+          ],
+          "on_entry": [
+            "/tp @e[type=zombie,name=!save,r=25] ~ -10 ~"
+          ]
+        },
+        "zombie_range_50": {
+          "transitions": [
+            {
+              "default": "math.mod(query.time_stamp,10)==1"
+            }
+          ],
+          "on_entry": [
+            "/tp @e[type=zombie,name=!save,r=50] ~ -10 ~"
+          ]
+        },
+        "zombie_range_75": {
+          "transitions": [
+            {
+              "default": "math.mod(query.time_stamp,10)==1"
+            }
+          ],
+          "on_entry": [
+            "/tp @e[type=zombie,name=!save,r=75] ~ -10 ~"
+          ]
+        }
+      }
+    }
+  }
+}

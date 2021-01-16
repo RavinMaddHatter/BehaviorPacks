@@ -1,0 +1,52 @@
+// HOW IT WORKS
+1- Place the block
+2- Interact with a Netherite Ingot to set the range
+	-The first time will spawn the beacon_base entity in the shape of a Nether Star. This is the 'blank' entity to set the mob type.
+3-After interacting with the ingot at least once, you can interact with the entity to set the mob type. Once you have set it, you won't be able to change it again though (was causing desyncing). You can increase the range at any time, either before or after setting the mob type.
+4-To deactivate, or change the mob type, just mine the block
+
+
+// GENERAL
+-Changed the BP version from 0.0.1 to 0.0.2 just to keep this changes as its own thing.
+-Fixed my name in the description to have no spaces between words, that's how I always present my name.
+-Added the beacon_base.block.json in /blocks/beacon_base.block.json.
+	This block will handle the different ranges of the beacon_base entity now. (see BEACON_BASE ENTITY)
+-Added a loot table in /loot_tables/blocks/beacon_base.json. 
+	Now this is how the player will get the beacon back when mined. The entity's loot table has been changed because of that (see BEACON_BASE ENTITY)
+-Added a recipe for the block
+	
+
+// BEACON_BASE ENTITY 
+	// CHANGES
+-Changed "is_spawnable" to false 
+	The block will handle the spawning, so it is not necesary to have a spawn egg. 
+	I did a texture for the egg in case it is needed for debuging. The spawn egg texture has been commented out in the RP entity, so it will need to be uncommented for the texture to work.
+-Changed the collision_box to be smaller 
+	This way it doesn't interfere with the block interactions.
+-Changed "is_pushable_by_piston" to false.
+	So the entity and the block won't get detached from each other. The block will be unmovable too.
+-Took out all the interactions for range as they are handle by the block now, 
+	only "minecraft:variant" remained. (see GENERAL)
+-Changed its loot table to "loot_tables/empty"
+	Now the block will handle it.
+-Changed all the interact_text to be handle by the .lang files in RP. 
+	This will make any text changes to be done in a single file, and also provide the option for translations to other languages. (Thinking of the future, just in case)
+
+	// ADDITIONS
+-Added family type "beacon_base". 
+	That way it can be referenced inside the block command events.
+-Added a damage_sensor
+	This makes the entity invulnerable, and to prevents the player from hitting it.
+-Added has_collision and has_gravity to "minecraft:physics" 
+	Both are set to false to keep the entity to be completely static in place.
+-Added 2 new component groups:
+	-"mpb:despawn" just to despawn the entity when the block is either deactivated or broken
+	-"mpb:mob_defined_empty" to set skin_id = 0 
+		You weren't using it and it was useful to set the entity's RP stuff for an 'empty' stage when the block is activated but before setting a mob with the heads (aka the floating Nether Star). It
+	-Moved the interactions with the heads to the component_group "mpb:mob_defined_empty"
+		This was to prevent state desync between the entity and the block.
+		Sadly this means that you will need to deactivate the beacon in order to set a new mob. 
+	-The "mpb:mob_defined_empty" group is properly removed from the entity in each of the "set_mob" events.
+-Added 2 new events to handle the 2 component groups from above
+	-"minecraft:entity_spawned" for the game to auto add "mpb:mob_defined_empty" as soon as the entity is spawned.
+	-"despawn_entity" for handling "mpb:despawn".

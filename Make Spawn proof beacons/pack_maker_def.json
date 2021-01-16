@@ -1,0 +1,88 @@
+{
+  "skeleton": {
+    "item": "skull:0",
+    "skin": "textures/entity/skeleton/skeleton",
+    "geo_file": "file",
+    "bone": "head"
+  },
+  "wither_skeleton": {
+    "item": "skull:1",
+    "skin": "textures/entity/skeleton/wither_skeleton"
+  },
+  "creeper": {
+    "item": "skull:4",
+    "skin": "textures/entity/creeper/creeper"
+  },
+  "zombie": {
+    "item": "skull:2",
+    "skin": "textures/entity/zombie/zombie"
+  },
+  "slime": {
+    "item": "slime",
+    "skin": "textures/entity/slime/slime"
+  },
+  "witch": {
+    "item": "glowstone_dust",
+    "skin": "textures/entity/witch"
+  },
+  "ghast": {
+    "item": "ghast_tear",
+    "skin": "textures/entity/ghast/ghast"
+  },
+  "hoglin": {
+    "item": "leather",
+    "skin": "textures/entity/hoglin/hoglin"
+  },
+  "vindicator": {
+    "item": "iron_axe",
+    "skin": "textures/entity/vindicator"
+  },
+  "pillager": {
+    "item": "crossbow",
+    "skin": "textures/entity/pillager"
+  },
+  "ravager": {
+    "item": "saddle",
+    "skin": "textures/entity/ravager"
+  },
+  "evocation_illager": {
+    "item": "totem",
+    "skin": "textures/entity/evoker"
+  },
+  "piglin": {
+    "item": "gold_block",
+    "skin": "textures/entity/piglin/piglin"
+  },
+  "zombie_pigman": {
+    "item": "golden_sword",
+    "skin": "textures/entity/piglin/zombie_piglin"
+  },
+  "magma_cube": {
+    "item": "magma_cream",
+    "skin": "textures/entity/slime/magma_cube"
+  },
+  "enderman": {
+    "item": "ender_pearl",
+    "skin": "textures/entity/enderman/enderman"
+  },
+  "blaze": {
+    "item": "blaze_rod",
+    "skin": "textures/entity/blaze"
+  },
+  "phantom": {
+    "item": "phantom_membrane",
+    "skin": "textures/entity/phantom"
+  },
+  "guardian": {
+    "item": "prismarine",
+    "skin": "textures/entity/guardian"
+  },
+  "drowned": {
+    "item": "trident",
+    "skin": "textures/entity/zombie/drowned"
+  },
+  "spider": {
+    "item": "web",
+    "skin": "textures/entity/spider/spider"
+  }
+}

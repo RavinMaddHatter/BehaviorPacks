@@ -1,0 +1,50 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "spb:beacon_base",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/items/nether_star",
+        "skeleton": "textures/entity/skeleton/skeleton",
+        "wither_skeleton": "textures/entity/skeleton/wither_skeleton",
+        "creeper": "textures/entity/creeper/creeper",
+        "zombie": "textures/entity/zombie/zombie",
+        "slime": "textures/entity/slime/slime",
+        "witch": "textures/entity/witch",
+        "ghast": "textures/entity/ghast/ghast",
+        "hoglin": "textures/entity/hoglin/hoglin",
+        "vindicator": "textures/entity/vindicator",
+        "pillager": "textures/entity/pillager",
+        "ravager": "textures/entity/ravager",
+        "evocation_illager": "textures/entity/evoker",
+        "piglin": "textures/entity/piglin/piglin",
+        "zombie_pigman": "textures/entity/piglin/zombie_piglin",
+        "magma_cube": "textures/entity/slime/magma_cube",
+        "enderman": "textures/entity/enderman/enderman",
+        "blaze": "textures/entity/blaze",
+        "phantom": "textures/entity/phantom",
+        "guardian": "textures/entity/guardian",
+        "drowned": "textures/entity/zombie/drowned",
+        "spider": "textures/entity/spider/spider"
+      },
+      "geometry": {
+        "default": "geometry.beacon_base.nether_star",
+        "head": "geometry.beacon_base.head"
+      },
+      "scripts": {
+        "animate": [
+          "move"
+        ]
+      },
+      "animations": {
+        "move": "animation.beacon_base"
+      },
+      "render_controllers": [
+        "controller.render.beacon_base"
+      ]
+    }
+  }
+}

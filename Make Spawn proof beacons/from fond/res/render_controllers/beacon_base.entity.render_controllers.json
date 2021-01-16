@@ -1,0 +1,29 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.beacon_base": {
+			"arrays": {
+				"textures": {
+					"Array.skins": [
+						"Texture.default",
+						"Texture.skeleton",
+						"Texture.wither_skeleton",
+						"Texture.creeper",
+						"Texture.zombie"
+						//Additional entity textures can be added here, in the order of the skin_id
+						//Don't forget to add them to the "textures" in the entity.rp.json
+					]
+				}
+			},
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"geometry": "query.skin_id== 0 ? Geometry.default : Geometry.head",
+			"textures": [
+				"Array.skins[query.skin_id]"
+			]
+		}
+	}
+}
