@@ -1,9 +1,0 @@
-## ENTITIES ##
-##entity.spb:beacon_base.name= 
-
-
-## BLOCKS ##
-tile.spb:beacon_base.block.name=Despawning Beacon
-
-## INTERACTIONS ##
-action.set_mob=Set Mob Type
