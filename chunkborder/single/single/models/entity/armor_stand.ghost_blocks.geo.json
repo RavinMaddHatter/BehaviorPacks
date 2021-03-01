@@ -1,0 +1,129 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.armor_stand.ghost_blocks",
+        "texture_width": 1,
+        "visible_bounds_offset": [
+          0.0,
+          1.5,
+          0.0
+        ],
+        "visible_bounds_width": 5120,
+        "visible_bounds_height": 5120,
+        "texture_height": 2
+      },
+      "bones": [
+        {
+          "name": "ghost_blocks",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "layer_0",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "parent": "ghost_blocks"
+        },
+        {
+          "name": "block_0_0_0",
+          "parent": "layer_0",
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                0,
+                0,
+                0
+              ],
+              "size": [
+                1,
+                1,
+                1
+              ],
+              "rotation": [
+                0,
+                0,
+                0
+              ],
+              "uv": {
+                "east": {
+                  "uv": [
+                    0,
+                    0
+                  ],
+                  "uv_size": [
+                    1,
+                    1
+                  ]
+                },
+                "west": {
+                  "uv": [
+                    0,
+                    0
+                  ],
+                  "uv_size": [
+                    1,
+                    1
+                  ]
+                },
+                "north": {
+                  "uv": [
+                    0,
+                    0
+                  ],
+                  "uv_size": [
+                    1,
+                    1
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    0,
+                    0
+                  ],
+                  "uv_size": [
+                    1,
+                    1
+                  ]
+                },
+                "down": {
+                  "uv": [
+                    0,
+                    1
+                  ],
+                  "uv_size": [
+                    1,
+                    1
+                  ]
+                },
+                "up": {
+                  "uv": [
+                    0,
+                    1
+                  ],
+                  "uv_size": [
+                    1,
+                    1
+                  ]
+                }
+              },
+              "inflate": -0.0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

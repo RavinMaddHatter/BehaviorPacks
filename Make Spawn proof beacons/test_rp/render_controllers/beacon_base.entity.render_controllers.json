@@ -1,0 +1,44 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.beacon_base": {
+      "arrays": {
+        "textures": {
+          "Array.skins": [
+            "Texture.default",
+            "Texture.skeleton",
+            "Texture.wither_skeleton",
+            "Texture.creeper",
+            "Texture.zombie",
+            "Texture.slime",
+            "Texture.witch",
+            "Texture.ghast",
+            "Texture.hoglin",
+            "Texture.vindicator",
+            "Texture.pillager",
+            "Texture.ravager",
+            "Texture.evocation_illager",
+            "Texture.piglin",
+            "Texture.zombie_pigman",
+            "Texture.magma_cube",
+            "Texture.enderman",
+            "Texture.blaze",
+            "Texture.phantom",
+            "Texture.guardian",
+            "Texture.drowned",
+            "Texture.spider"
+          ]
+        }
+      },
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "geometry": "query.skin_id== 0 ? Geometry.default : Geometry.head",
+      "textures": [
+        "Array.skins[query.skin_id]"
+      ]
+    }
+  }
+}
